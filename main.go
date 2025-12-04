@@ -6,6 +6,8 @@ import (
 
 	"github.com/zeropsykh/advent-of-code-2025/days/day01"
 	"github.com/zeropsykh/advent-of-code-2025/days/day02"
+	"github.com/zeropsykh/advent-of-code-2025/days/day03"
+	"github.com/zeropsykh/advent-of-code-2025/days/day04"
 	helper "github.com/zeropsykh/advent-of-code-2025/internal"
 )
 
@@ -17,6 +19,8 @@ type Day interface {
 var days = map[int]Day{
 	1: day01.Day01{},
 	2: day02.Day02{},
+	3: day03.Day03{},
+	4: day04.Day04{},
 }
 
 func main() {
@@ -35,7 +39,7 @@ func main() {
 		return
 	}
 
-	if day < 1 || day > 2 {
+	if day < 1 || day > 4 {
 		fmt.Println("Usage: AoC25 -d[1-12] -all")
 		return
 	} 
