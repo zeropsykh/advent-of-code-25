@@ -13,3 +13,19 @@ func GetInput(input_file string) string {
 
 	return string(content)
 }
+
+func SumArray(arr []int) int {
+	var sum int
+	for _, num := range arr {
+		sum += num
+	}
+	return sum
+}
+
+func ProductArray(arr []int) int {
+	var product int = 1
+	for _, num := range arr {
+		product *= num
+	}
+	return product
+}
