@@ -8,7 +8,7 @@ import (
 
 type Day02 struct {}
 
-func (d Day02) Part1(input string) string {
+func (d Day02) Part1(input string) int {
 	idRanges := strings.Split(input, ",")
 
 	// Sum of all invalid ids
@@ -36,10 +36,10 @@ func (d Day02) Part1(input string) string {
 		}
 	}
 
-	return fmt.Sprint(invalidIDSum)
+	return invalidIDSum
 }
 
-func (d Day02) Part2(input string) string {
+func (d Day02) Part2(input string) int {
 	idRanges := strings.Split(input, ",")
 
 	// Sum of all invalid ids
@@ -84,7 +84,7 @@ func (d Day02) Part2(input string) string {
 		}
 	}
 
-	return fmt.Sprint(invalidIDSum)
+	return invalidIDSum
 }
 
 func splitIntoChunk(s string, chunkSize int) []string {

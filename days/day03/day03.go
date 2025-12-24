@@ -8,7 +8,7 @@ import (
 
 type Day03 struct{}
 
-func (d Day03) Part1(input string) string {
+func (d Day03) Part1(input string) int {
 	banks := strings.Split(input, "\n")
 
 	totalOutputJoltage := 0
@@ -39,11 +39,11 @@ func (d Day03) Part1(input string) string {
 		totalOutputJoltage += largestJoltage 	
 	}
 
-	return fmt.Sprint(totalOutputJoltage)
+	return totalOutputJoltage
 }
 
 
-func (d Day03) Part2(input string) string {
+func (d Day03) Part2(input string) int {
 	banks := strings.Split(input, "\n")
 
 	// Solved using same approach as Part1
@@ -84,5 +84,5 @@ func (d Day03) Part2(input string) string {
 		totalOutputJoltage += largestJoltage
 	}
 
-	return fmt.Sprint(totalOutputJoltage)
+	return totalOutputJoltage
 }

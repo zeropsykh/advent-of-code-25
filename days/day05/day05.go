@@ -14,7 +14,7 @@ type idRange struct {
 	end		int
 }
 
-func (d Day05) Part1(input string) string {
+func (d Day05) Part1(input string) int {
 	database := strings.Split(input, "\n\n")
 
 	idRanges := strings.Split(database[0], "\n")
@@ -51,10 +51,10 @@ func (d Day05) Part1(input string) string {
 		}
 	}
 
-	return fmt.Sprint(freshAvailbleIDCount)
+	return freshAvailbleIDCount
 }
 
-func (d Day05) Part2(input string) string {
+func (d Day05) Part2(input string) int {
 	database := strings.Split(input, "\n\n")
 
 	idRanges := strings.Split(database[0], "\n")
@@ -109,6 +109,6 @@ func (d Day05) Part2(input string) string {
 		freshAvailableIDCount += idRng.end - idRng.start + 1	
 	}
 	
-	return fmt.Sprint(freshAvailableIDCount)
+	return freshAvailableIDCount
 }
 

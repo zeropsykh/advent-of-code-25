@@ -1,13 +1,12 @@
 package day04
 
 import (
-	"fmt"
 	"strings"
 )
 
 type Day04 struct {}
 
-func (d Day04) Part1(input string) string {
+func (d Day04) Part1(input string) int {
 	grid := strings.Split(input, "\n")
 
 	// Number of paper roll that can be forklifted
@@ -43,10 +42,10 @@ func (d Day04) Part1(input string) string {
 		}
 	}
 
-	return fmt.Sprint(rollCount)
+	return rollCount
 }
 
-func (d Day04) Part2(input string) string {
+func (d Day04) Part2(input string) int {
 	grid := strings.Split(input, "\n")
 
 	totalRollCount := 0
@@ -98,6 +97,6 @@ func (d Day04) Part2(input string) string {
 		totalRollCount += rollCount
 	}
 
-	return fmt.Sprint(totalRollCount)
+	return totalRollCount
 }
 

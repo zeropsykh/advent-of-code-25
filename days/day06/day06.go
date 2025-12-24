@@ -10,7 +10,7 @@ import (
 
 type Day06 struct {}
 
-func (d Day06) Part1(input string) string {
+func (d Day06) Part1(input string) int {
 	lines := strings.SplitAfter(input, "\n")
 
 	var problems [][]int
@@ -43,10 +43,10 @@ func (d Day06) Part1(input string) string {
 
 	grandTotal := calculateGrandTotal(problems, lines[len(lines) - 1])
 
-	return fmt.Sprint(grandTotal)
+	return grandTotal
 }
 
-func (d Day06) Part2(input string) string {
+func (d Day06) Part2(input string) int {
 	lines := strings.SplitAfter(input, "\n")
 	
 	var (
@@ -79,7 +79,7 @@ func (d Day06) Part2(input string) string {
 
 	grandTotal := calculateGrandTotal(problems, lines[len(lines) - 1])
 
-	return fmt.Sprint(grandTotal)
+	return grandTotal
 }
 
 func calculateGrandTotal(numbers [][]int, operations string) int {

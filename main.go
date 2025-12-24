@@ -14,8 +14,8 @@ import (
 )
 
 type Day interface {
-	Part1(string) string
-	Part2(string) string
+	Part1(string) int
+	Part2(string) int 
 }
 
 var days = map[int]Day{

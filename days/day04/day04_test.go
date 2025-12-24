@@ -6,12 +6,12 @@ func TestPart1(t *testing.T) {
 	tests := []struct{
 		desc	string
 		input	string
-		output	string
+		output 	int	
 	}{
 		{
 			desc: "day04 part1 given test",
 			input: "..@@.@@@@.\n@@@.@.@.@@\n@@@@@.@.@@\n@.@@@@..@.\n@@.@@@@.@@\n.@@@@@@@.@\n.@.@.@.@@@\n@.@@@.@@@@\n.@@@@@@@@.\n@.@.@@@.@.",
-			output: "13",	
+			output: 13,	
 		},
 	}
 
@@ -21,7 +21,7 @@ func TestPart1(t *testing.T) {
 			got := d.Part1(test.input)
 
 			if got != test.output {
-				t.Errorf("got %s, want %s", got, test.output)
+				t.Errorf("got %v, want %v", got, test.output)
 			}
 		})
 	}
@@ -31,12 +31,12 @@ func TestPart2(t *testing.T) {
 	tests := []struct{
 		desc	string
 		input	string
-		output	string
+		output	int	
 	}{
 		{
 			desc: "day04 part2 given test",
 			input: "..@@.@@@@.\n@@@.@.@.@@\n@@@@@.@.@@\n@.@@@@..@.\n@@.@@@@.@@\n.@@@@@@@.@\n.@.@.@.@@@\n@.@@@.@@@@\n.@@@@@@@@.\n@.@.@@@.@.",
-			output: "43",	
+			output: 43,
 		},
 	}
 
@@ -46,7 +46,7 @@ func TestPart2(t *testing.T) {
 			got := d.Part2(test.input)
 
 			if got != test.output {
-				t.Errorf("got %s, want %s", got, test.output)
+				t.Errorf("got %v, want %v", got, test.output)
 			}
 		})
 	}

@@ -12,7 +12,7 @@ func mod(a, b int) int {
 	return (a % b + b) % b
 }
 
-func (d Day01) Part1(input string) (output string) {
+func (d Day01) Part1(input string) int {
 	rotations := strings.Split(input, "\n")
 
 	// Initially the dial is pointed to 50
@@ -41,10 +41,10 @@ func (d Day01) Part1(input string) (output string) {
 		}
 	}
 
-	return fmt.Sprint(countZero)
+	return countZero
 }
 
-func (d Day01) Part2(input string) (output string) {
+func (d Day01) Part2(input string) int {
 	rotations := strings.Split(input, "\n")
 
 	// Initially the dial is pointed to 50
@@ -80,5 +80,5 @@ func (d Day01) Part2(input string) (output string) {
 		}
 	}
 
-	return fmt.Sprint(countZero)
+	return countZero
 }

@@ -8,12 +8,12 @@ func TestPart1(t *testing.T) {
 	tests := []struct{
 		desc	string
 		input	string
-		output	string
+		output	int
 	}{
 		{
 			desc: "given test",
 			input: "123 328  51 64 \n 45 64  387 23 \n  6 98  215 314\n*   +   *   +  ",
-			output: "4277556",
+			output: 4277556,
 		},
 	}
 
@@ -23,7 +23,7 @@ func TestPart1(t *testing.T) {
 			got := d.Part1(test.input)
 
 			if got != test.output {
-				t.Errorf("got %s, want %s", got, test.output)
+				t.Errorf("got %v, want %v", got, test.output)
 			}
 		})
 	}
@@ -33,12 +33,12 @@ func TestPart2(t *testing.T) {
 	tests := []struct{
 		desc	string
 		input	string
-		output	string
+		output	int
 	}{
 		{
 			desc: "given test",
 			input: "123 328  51 64 \n 45 64  387 23 \n  6 98  215 314\n*   +   *   +  ",
-			output: "3263827",
+			output: 3263827,
 		},
 	}
 
@@ -48,7 +48,7 @@ func TestPart2(t *testing.T) {
 			got := d.Part2(test.input)
 
 			if got != test.output {
-				t.Errorf("got %s, want %s", got, test.output)
+				t.Errorf("got %v, want %v", got, test.output)
 			}
 		})
 	}
